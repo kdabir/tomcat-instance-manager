@@ -42,9 +42,11 @@ Examples when Tomcat Instance Manger comes handy
 
 Example: once we download the project, we would have tomcat6/tomcat7 `.bat` files in the directory. Lets say we extract tomcat-instance-manager to `D:\scripts\`
 
-Now we want to create two instances of tomcat, calling it default instance (for some app to keep running on this instance, e.g. some REST services) and other as dev instance (which can be used to test the apps we are developing)
+Now we want to create two instances of tomcat, calling it `default` instance (for some app to keep running on this instance, e.g. some REST services) and other as `dev` instance (which can be used to test the apps we are developing)
 
-### Creating Dev instance
+### Creating instances
+
+*Creating `dev` instance*
 
     D:\scripts>tomcat6 create-instance tomcat-dev d:\etc\tomcat-profiles tcdev "Tomcat dev Instance"
     D:\sdk\tomcat-6.0\conf\catalina.policy
@@ -58,7 +60,7 @@ Now we want to create two instances of tomcat, calling it default instance (for 
     Instance created successfully : d:\etc\tomcat-profiles\tomcat-dev
     Instance handler script created successfully
 
-### Creating default instance
+*Creating `default` instance*
 
     D:\scripts>tomcat6 create-instance tomcat-default d:\etc\tomcat-profiles tcdefault "Tomcat default Instance"
     D:\sdk\tomcat-6.0\conf\catalina.policy
@@ -72,7 +74,9 @@ Now we want to create two instances of tomcat, calling it default instance (for 
     Instance created successfully : d:\etc\tomcat-profiles\tomcat-default
     Instance handler script created successfully
 
-### Starting default instance
+### Starting / Stopping instances
+
+*Starting `default` instance*
 
     D:\scripts>tomcat-default start
     Using CATALINA_BASE:   d:\etc\tomcat-profiles\tomcat-default
@@ -82,7 +86,7 @@ Now we want to create two instances of tomcat, calling it default instance (for 
     Using CLASSPATH:       D:\sdk\tomcat-6.0\bin\bootstrap.jar
     SERVER STARTED (IN A SEPERATE WINDOW)
 
-### Stopping
+*Stopping `default` instance*
 
     D:\scripts>tomcat-default stop
     Using CATALINA_BASE:   d:\etc\tomcat-profiles\tomcat-default
@@ -92,31 +96,39 @@ Now we want to create two instances of tomcat, calling it default instance (for 
     Using CLASSPATH:       D:\sdk\tomcat-6.0\bin\bootstrap.jar
     SERVER STOPPED
 
-### Installing default instance as Windows service
+### Installing as Windows service
+
+*Installing `default` instance as service*
 
     D:\scripts>tomcat-default service install
     SERVICE 'tcdefault'-'Apache Tomcat 'tomcat-default' instance based at d:\etc\tomcat-profiles\tomcat-default' INSTALLED SUCCESSFULLY
 
-### Installing dev instance as service
+*Installing `dev` instance as service*
 
     D:\scripts>tomcat-dev service install
     SERVICE 'tcdev'-'Apache Tomcat 'tomcat-dev' instance based at d:\etc\tomcat-profiles\tomcat-dev' INSTALLED SUCCESSFULLY
 
-### Starting dev instance as service
+### Starting / Stopping service
+
+*Starting `dev` instance as service*
 
     D:\scripts>tomcat-dev service start
     The Tomcat Dev Instance service is starting..
     The Tomcat Dev Instance service was started successfully.
 
-### Stopping the dev instance service
+*Stopping the `dev` instance as service*
 
     D:\scripts>tomcat-dev service stop
     The Tomcat Dev Instance service was stopped successfully.
 
 ### Monitor an installed instance service
 
+*Monitoring the `dev` instance service*
+
     D:\scripts>tomcat-dev service monitor
 
 ### Editing a service
+
+*Editing the `dev` instance service*
 
     D:\scripts>tomcat-dev service edit
