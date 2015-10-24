@@ -8,7 +8,7 @@ Manage multiple Tomcat instances on Windows using a Tomcat single installation.
 ## Download and Installation
 We may clone this repository or just [Download](https://github.com/kdabir/tomcat-instance-manager/archive/master.zip) and extact the zip at desired location.
 
-Set the Environment Variable `CATALINA_HOME` to point to our Tomcat installation directory (not the Tomcat Instance manager scripts direct) and also set `JAVA_HOME` to point to Java installation.
+Set the Environment Variable `CATALINA_HOME` to point to our Tomcat installation directory (not the Tomcat Instance manager scripts dir) and also set `JAVA_HOME` to point to Java installation.
 
 
 ## Purpose
