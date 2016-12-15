@@ -1,9 +1,7 @@
 Tomcat Instance Manager
 =======================
 
-Manage multiple Tomcat instances on Windows using a Tomcat single installation.
-
-*Previously hosted on [Google code](https://code.google.com/p/tomcat-instance-manager/). Going forward, it will be maintained on Github.*
+Run and Manage multiple Tomcat instances on Windows using a single Tomcat installation. 
 
 ## Download and Installation
 We may clone this repository or just [Download](https://github.com/kdabir/tomcat-instance-manager/archive/master.zip) and extact the zip at desired location.
@@ -13,15 +11,16 @@ Set the Environment Variable `CATALINA_HOME` to point to our Tomcat installation
 
 ## Purpose
 
-*Tomcat Instance Manager* helps us create and manage multiple tomcat instance using same tomcat binaries. Different webapps/ services can be then installed on different instances. All instances are isolated from each other, started on different ports and can be started/stopped/restarted without affecting other instances. 
+*Tomcat Instance Manager* helps us create and manage multiple tomcat instance using same tomcat binaries. Different webapps/ micro-services can be then installed on different instances. All instances are isolated from each other, started on different ports and can be started/stopped/restarted without affecting other instances. 
 
 Tomcat can run out of same binaries with different configuration for each instance/environment. With tomcat instance manager, we can easily create multiple instances without having to install tomcat multiple times.
 
-It also lets us create windows services per instance, so that we don't need to start/stop each instance from command line (we can still do so if we want to). Installing service has its own pros and cons, which need not be discussed here.
+It also lets us create windows services per instance, so that we don't need to start/stop each instance from scripts (we can still do so if we want to). Installing service has its own pros and cons, which need not be discussed here.
 
-Examples when Tomcat Instance Manger comes handy
+Tomcat Instance Manger comes handy when:
 
 - We have two or more apps to run, let's say one REST API and a webapp that consumes the API. With Tomcat Instance Manager we can deploy all apps on different instances of tomcat.
+- We have multiple microservices to run locally.
 - When keeping one app always on, we need to develop test other apps such that one can be started as a background service whereas other instance can be used for development and restarted as necessary. 
 - Simulating two different environments for a same app (let's say QA and Dev). 
 - Just want to create a throwaway tomcat configuration without modifying our existing installation.
